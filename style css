@@ -1,0 +1,164 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 10px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    position: relative;
+}
+
+/* Background Image Styling */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("image.jpg") no-repeat center center, #000;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Wrapper Styling */
+.wrapper {
+    width: 400px;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    transition: all 0.3s ease;
+}
+
+.wrapper:hover {
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between fields */
+}
+
+/* Heading */
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Input Fields */
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: 0.3s ease;
+    background: transparent;
+    padding: 0 5px; /* Space around label */
+}
+
+/* Input Styling */
+.input-field input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    outline: none;
+    font-size: 16px;
+    color: white;
+    padding: 10px 10px 10px 10px; /* Adding padding to avoid overlap with label */
+    border-radius: 5px;
+}
+
+/* Floating Label when input is focused or filled */
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+    font-size: 12px;
+    color: #ffdde1;
+    top: -18px; /* Moves label above the input */
+}
+
+/* Button Styling */
+button {
+    background-color: #271930;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    color: black;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+}
+
+/* Registration Section */
+.register {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+}
+
+/* Link Styling */
+.wrapper a {
+    color: #ffdde1;
+    text-decoration: none;
+}
+
+.wrapper a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the "Remember me" Checkbox */
+.remember-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns the text and checkbox side by side */
+}
+
+.remember-label input[type="checkbox"] {
+    margin-right: 10px; /* Adds space between checkbox and text */
+}
+
+.forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px 0;
+    color: white;
+}
+
+#remember {
+    accent-color: #ffdde1;
+}
