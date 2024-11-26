@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- Link to your external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="login.html" method="post">
+            <h2>Register</h2>
+            <!-- First Name -->
+            <div class="input-field">
+                <input type="text" id="firstName" required>
+                <label for="firstName">First Name</label>
+            </div>
+            <!-- Last Name -->
+            <div class="input-field">
+                <input type="text" id="lastName" required>
+                <label for="lastName">Last Name</label>
+            </div>
+            <!-- Email -->
+            <div class="input-field">
+                <input type="email" id="email" required>
+                <label for="email">Email</label>
+            </div>
+            <!-- Phone Number -->
+            <div class="input-field">
+                <input type="text" id="phone" pattern="\d{11}" title="Must be 11 digits" required>
+                <label for="phone">Phone Number</label>
+            </div>
+            <!-- Password -->
+            <div class="input-field">
+                <input type="password" id="password" required>
+                <label for="password">Password</label>
+            </div>
+            <!-- Confirm Password -->
+            <div class="input-field">
+                <input type="password" id="confirmPassword" required>
+                <label for="confirmPassword">Confirm Password</label>
+            </div>
+            <div class="error-message" id="errorMessage"></div>
+            <!-- Submit Button -->
+            <button type="submit" id="registerButton">Register</button>
+            <!-- Back to Login -->
+            <div class="register">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- JavaScript Validation -->
+    <script>
+        const form = document.querySelector('form');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', (e) => {
+            if (password.value !== confirmPassword.value) {
+                e.preventDefault();
+                errorMessage.textContent = "Passwords do not match!";
+                errorMessage.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>
