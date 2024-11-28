@@ -10,7 +10,7 @@
     <!-- Page Title -->
     <title>Login Form</title>
 
-    <!-- Link to External CSS -->
+    <!-- Link to External CSS -->s
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
