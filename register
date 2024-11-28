@@ -9,38 +9,40 @@
 </head>
 <body>
     <div class="wrapper">
-        <form action="login.html" method="post">
+        <!-- Registration Form -->
+        <form id="registerForm" action="login.html" method="post">
             <h2>Register</h2>
             <!-- First Name -->
             <div class="input-field">
-                <input type="text" id="firstName" required>
                 <label for="firstName">First Name</label>
+                <input type="text" id="firstName" required>
             </div>
             <!-- Last Name -->
             <div class="input-field">
-                <input type="text" id="lastName" required>
                 <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" required>
             </div>
             <!-- Email -->
             <div class="input-field">
-                <input type="email" id="email" required>
                 <label for="email">Email</label>
+                <input type="email" id="email" required>
             </div>
             <!-- Phone Number -->
             <div class="input-field">
-                <input type="text" id="phone" pattern="\d{11}" title="Must be 11 digits" required>
                 <label for="phone">Phone Number</label>
+                <input type="text" id="phone" pattern="\d{11}" title="Must be 11 digits" required>
             </div>
             <!-- Password -->
             <div class="input-field">
-                <input type="password" id="password" required>
                 <label for="password">Password</label>
+                <input type="password" id="password" required>
             </div>
             <!-- Confirm Password -->
             <div class="input-field">
-                <input type="password" id="confirmPassword" required>
                 <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" required>
             </div>
+            <!-- Error Message -->
             <div class="error-message" id="errorMessage"></div>
             <!-- Submit Button -->
             <button type="submit" id="registerButton">Register</button>
